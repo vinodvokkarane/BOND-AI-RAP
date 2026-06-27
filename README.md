@@ -1,3 +1,14 @@
+---
+title: BOND-AI-RAP
+emoji: 🔬
+colorFrom: teal
+colorTo: blue
+sdk: docker
+app_port: 7860
+pinned: false
+short_description: BOND-AI-RAP Reliability Assessment Platform
+---
+
 # BOND-AI-RAP Reliability Assessment Platform
 
 BOND-AI-RAP is Version 2 of the BOND-AI portal: a reliability assessment platform for the integrated interface-and-bonding test coupon. It keeps the 500C-capable alumina coupon, Zone A interface structures, Zone B bonding structures, baseline Ag-NP ink, and ANI high-temperature conductive ink, then adds a reviewer-facing Reliability Assessment Platform layer inspired by SARA-style virtual qualification workflows.
