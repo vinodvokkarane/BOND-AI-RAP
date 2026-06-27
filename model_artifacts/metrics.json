@@ -1,0 +1,180 @@
+{
+  "trained_at_utc": "2026-06-27T15:37:23.904821+00:00",
+  "synthetic_rows": {
+    "pattern": 80000,
+    "interface": 40000,
+    "coupon": 120000,
+    "total": 240000
+  },
+  "pattern": {
+    "defect_accuracy": 0.9726810106240514,
+    "defect_macro_f1": 0.8837420913858717,
+    "trace_mae": {
+      "line_width_um": 7.6640025347063645,
+      "thickness_um": 0.12068527584474187,
+      "resistance_ohm": 0.9136214727446924,
+      "quality_score": 3.163020643727419
+    },
+    "trace_r2": {
+      "line_width_um": 0.9986434183394389,
+      "thickness_um": 0.9362770579023052,
+      "resistance_ohm": 0.9933287330307884,
+      "quality_score": 0.8943640906223419
+    },
+    "conformal_q90": {
+      "line_width_um": 23.245319804217267,
+      "thickness_um": 0.2532631752690078,
+      "resistance_ohm": 2.845834004562353,
+      "quality_score": 6.375257210873629
+    },
+    "class_distribution": {
+      "clog": 3481,
+      "nominal": 3265,
+      "overspray": 2487,
+      "under_deposit": 1831,
+      "over_deposit": 120,
+      "unstable": 17
+    }
+  },
+  "interface": {
+    "interface_mae": {
+      "resonance_frequency_ghz": 0.03415900151383174,
+      "return_loss_db": 0.8105680845751032,
+      "insertion_loss_db": 0.05003466291734386,
+      "impedance_ohm": 1.1170221317902764,
+      "yield_probability": 0.0117014799688507
+    },
+    "interface_r2": {
+      "resonance_frequency_ghz": 0.87125393053966,
+      "return_loss_db": 0.8978509414168494,
+      "insertion_loss_db": 0.9607925240971452,
+      "impedance_ohm": 0.23505863005649608,
+      "yield_probability": 0.9772288798576816
+    },
+    "conformal_q90": {
+      "resonance_frequency_ghz": 0.06976864997466486,
+      "return_loss_db": 1.6838724517734225,
+      "insertion_loss_db": 0.10351770702728824,
+      "impedance_ohm": 2.317498384661737,
+      "yield_probability": 0.02416360678331688
+    },
+    "device_distribution": {
+      "cpw": 5601
+    }
+  },
+  "coupon": {
+    "failure_accuracy": 0.7910714285714285,
+    "failure_macro_f1": 0.49483274236058483,
+    "coupon_mae": {
+      "sheet_resistance_drift_pct": 1.683692132331731,
+      "contact_resistance_drift_pct": 2.3257287588767435,
+      "crack_probability": 0.020797833327702426,
+      "delamination_area_pct": 1.8325618608153063,
+      "adhesion_strength_mpa": 1.2681252847997626,
+      "void_fraction_pct": 0.010982949193529276,
+      "post_aging_shear_mpa": 1.093220055073034,
+      "reliability_score": 2.3695167824681147
+    },
+    "coupon_r2": {
+      "sheet_resistance_drift_pct": 0.9788393376753349,
+      "contact_resistance_drift_pct": 0.9782076233670391,
+      "crack_probability": 0.9668546632804683,
+      "delamination_area_pct": 0.9712605194986788,
+      "adhesion_strength_mpa": 0.8830319510957444,
+      "void_fraction_pct": 0.9998788239519453,
+      "post_aging_shear_mpa": 0.8603126355904689,
+      "reliability_score": 0.9744452477233858
+    },
+    "conformal_q90": {
+      "sheet_resistance_drift_pct": 3.4728958182691003,
+      "contact_resistance_drift_pct": 4.701105938304137,
+      "crack_probability": 0.04285412626394236,
+      "delamination_area_pct": 3.772939314474549,
+      "adhesion_strength_mpa": 2.597860035029083,
+      "void_fraction_pct": 0.017695581860357558,
+      "post_aging_shear_mpa": 2.247216939788486,
+      "reliability_score": 4.845487678802906
+    },
+    "failure_distribution": {
+      "marginal": 11207,
+      "delamination": 3368,
+      "crack_fatigue": 904,
+      "contact_degradation": 884,
+      "pass": 250,
+      "resistance_drift": 115,
+      "shear_failure": 69,
+      "voiding": 3
+    },
+    "structure_distribution": {
+      "daisy_chain_kelvin": 2458,
+      "shear_test_pads": 2423,
+      "straight_lines": 2416,
+      "meander_lines": 2406,
+      "square_pads": 2404,
+      "dummy_die_attach": 2387,
+      "overlap_pads": 2306
+    },
+    "ink_distribution": {
+      "baseline_ag": 8432,
+      "high_temp_500c": 8368
+    }
+  },
+  "benchmarks": {
+    "pattern_trace": {
+      "ExtraTrees": {
+        "mae_mean": 3.5385785912922767,
+        "r2_mean": 0.8948056777240612
+      },
+      "RandomForest": {
+        "mae_mean": 3.6062880229160226,
+        "r2_mean": 0.8947269325564703
+      },
+      "HistGradientBoosting": {
+        "mae_mean": 3.162446026489663,
+        "r2_mean": 0.9530948146205431
+      }
+    },
+    "cpw_validation": {
+      "ExtraTrees": {
+        "mae_mean": 0.42169596466278964,
+        "r2_mean": 0.7655566327428811
+      },
+      "RandomForest": {
+        "mae_mean": 0.4252894349971382,
+        "r2_mean": 0.7558266261719753
+      },
+      "HistGradientBoosting": {
+        "mae_mean": 0.41030223658462983,
+        "r2_mean": 0.7883843845773933
+      }
+    },
+    "coupon_reliability": {
+      "ExtraTrees": {
+        "mae_mean": 1.6882299443479871,
+        "r2_mean": 0.9128999730210214
+      },
+      "RandomForest": {
+        "mae_mean": 1.7117706035016313,
+        "r2_mean": 0.9071473535158682
+      },
+      "HistGradientBoosting": {
+        "mae_mean": 1.4019788403649656,
+        "r2_mean": 0.9472700302302984
+      }
+    }
+  },
+  "model_card": {
+    "served_models": {
+      "print_process_classifier": "HistGradientBoostingClassifier for process anomaly states that feed coupon geometry descriptors",
+      "trace_regressor": "HistGradientBoostingRegressor multi-output wrapper for coupon line width, thickness, resistance, and quality",
+      "cpw_validation_regressor": "HistGradientBoostingRegressor surrogate for blind CPW validation metrics on alumina",
+      "coupon_digital_twin": "Tree ensemble reliability surrogate for Zone A interface and Zone B bonding structures"
+    },
+    "research_upgrade_path": [
+      "Physics-informed tabular learning after coupon data collection",
+      "Visual encoders for optical, SEM, EDS, FIB, and CT inspection imagery",
+      "Temporal models for in-situ electrical drift during aging and thermal cycling",
+      "Uncertainty-guided active learning for next coupon and condition selection"
+    ]
+  }
+}

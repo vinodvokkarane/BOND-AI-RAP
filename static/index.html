@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BOND-AI-RAP Reliability Assessment Platform</title>
+    <link rel="stylesheet" href="/static/styles.css?v=rap-v2-20260627" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">BOND-AI<br />RAP</span>
+        <div>
+          <h1>BOND-AI-RAP Reliability Assessment Platform</h1>
+          <p>Virtual qualification and physics-of-failure feedback for integrated alumina interface and bonding coupons</p>
+        </div>
+      </div>
+      <div class="status-strip" aria-label="model status">
+        <span id="healthDot" class="dot"></span>
+        <span id="healthText">Loading models</span>
+      </div>
+    </header>
+
+    <main class="rap-shell">
+      <aside class="setup-panel" aria-label="assessment setup">
+        <div class="panel-heading">
+          <p class="eyebrow">Assessment setup</p>
+          <h2>Coupon and mission</h2>
+        </div>
+
+        <label class="field">
+          <span>Ink / alumina stack</span>
+          <select id="materialSet"></select>
+        </label>
+
+        <div class="stack-card" id="materialStack"></div>
+
+        <div class="field-grid">
+          <label class="field">
+            <span>Analysis zone</span>
+            <select id="analysisZone">
+              <option value="interface">Zone A interface</option>
+              <option value="bonding">Zone B bonding</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Ink family</span>
+            <select id="couponInk"></select>
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Zone A structure</span>
+          <select id="zoneAStructure"></select>
+        </label>
+        <label class="field">
+          <span>Zone B structure</span>
+          <select id="zoneBStructure"></select>
+        </label>
+        <label class="field">
+          <span>Test method</span>
+          <select id="testMethod"></select>
+        </label>
+
+        <div class="field-grid">
+          <label class="field">
+            <span>Aging temp <b id="agingTempOut"></b></span>
+            <input id="agingTemp" type="range" min="25" max="500" step="25" />
+          </label>
+          <label class="field">
+            <span>Aging hours <b id="agingHoursOut"></b></span>
+            <input id="agingHours" type="range" min="0" max="1000" step="24" />
+          </label>
+        </div>
+
+        <div class="field-grid">
+          <label class="field">
+            <span>Thermal cycles <b id="thermalCyclesOut"></b></span>
+            <input id="thermalCycles" type="range" min="0" max="1000" step="50" />
+          </label>
+          <label class="field">
+            <span>Strain <b id="strainOut"></b></span>
+            <input id="strainPct" type="range" min="0" max="6" step="0.05" />
+          </label>
+        </div>
+
+        <div class="field-grid">
+          <label class="field">
+            <span>CT voids <b id="voidOut"></b></span>
+            <input id="voidFraction" type="range" min="0" max="18" step="0.1" />
+          </label>
+          <label class="field">
+            <span>Roughness <b id="roughOut"></b></span>
+            <input id="edgeRoughness" type="range" min="0.8" max="20" step="0.1" />
+          </label>
+        </div>
+
+        <div class="field-grid">
+          <label class="field">
+            <span>Monte Carlo <b id="sampleOut"></b></span>
+            <input id="sampleCount" type="range" min="80" max="800" step="40" />
+          </label>
+          <label class="field">
+            <span>Search depth <b id="candidateOut"></b></span>
+            <input id="candidateCount" type="range" min="160" max="900" step="40" />
+          </label>
+        </div>
+
+        <button id="runAssessment" class="primary-action" type="button">Run RAP Assessment</button>
+      </aside>
+
+      <section class="main-panel">
+        <section class="hero-panel" aria-label="assessment overview">
+          <div class="hero-copy">
+            <p class="eyebrow">Version 2 platform</p>
+            <h2 id="heroTitle">Reviewer-grade reliability assessment</h2>
+            <p id="heroNarrative">Loading BOND-AI-RAP assessment modules.</p>
+            <div class="hero-metrics" id="heroMetrics"></div>
+          </div>
+          <div class="coupon-stage">
+            <svg id="couponSvg" viewBox="0 0 760 420" role="img" aria-label="integrated coupon reliability map"></svg>
+          </div>
+        </section>
+
+        <nav class="tab-strip" id="tabStrip" aria-label="RAP feature tabs"></nav>
+
+        <section class="tab-panel" id="tabPanel" aria-live="polite"></section>
+      </section>
+    </main>
+
+    <script src="/static/app.js?v=rap-v2-20260627" type="module"></script>
+  </body>
+</html>

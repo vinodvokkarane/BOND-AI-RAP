@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+.DS_Store
+*.log
+data/*.parquet
+data/*.csv
+!data/synthetic_preview.json
+!data/synthetic_summary.json

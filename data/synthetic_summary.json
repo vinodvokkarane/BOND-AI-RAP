@@ -1,0 +1,144 @@
+{
+  "rows": {
+    "pattern": 80000,
+    "interface": 40000,
+    "coupon": 120000,
+    "total": 240000
+  },
+  "pattern_defect_distribution": {
+    "clog": 24858,
+    "nominal": 23316,
+    "overspray": 17764,
+    "under_deposit": 13082,
+    "over_deposit": 858,
+    "unstable": 122
+  },
+  "pattern_type_distribution": {
+    "dogbone": 26795,
+    "square_pad": 26608,
+    "meander": 26597
+  },
+  "material_set_distribution": {
+    "ani_alumina": 40139,
+    "ag_np_alumina": 39861
+  },
+  "device_type_distribution": {
+    "cpw": 40000
+  },
+  "coupon_structure_distribution": {
+    "daisy_chain_kelvin": 17465,
+    "straight_lines": 17216,
+    "meander_lines": 17119,
+    "shear_test_pads": 17117,
+    "dummy_die_attach": 17043,
+    "overlap_pads": 17034,
+    "square_pads": 17006
+  },
+  "coupon_failure_distribution": {
+    "marginal": 80051,
+    "delamination": 24058,
+    "crack_fatigue": 6452,
+    "contact_degradation": 6314,
+    "pass": 1790,
+    "resistance_drift": 822,
+    "shear_failure": 494,
+    "voiding": 19
+  },
+  "coupon_ink_distribution": {
+    "baseline_ag": 60068,
+    "high_temp_500c": 59932
+  },
+  "target_ranges": {
+    "pattern": {
+      "line_width_um": {
+        "min": 56.262959695366575,
+        "mean": 365.4104657456956,
+        "max": 1301.7248441066865
+      },
+      "thickness_um": {
+        "min": 1.621005587565967,
+        "mean": 3.4695941241356993,
+        "max": 5.982500165961415
+      },
+      "resistance_ohm": {
+        "min": 0.11183569824425614,
+        "mean": 17.297472109446883,
+        "max": 132.26136580279316
+      },
+      "quality_score": {
+        "min": 15.26451376450948,
+        "mean": 75.46884790244523,
+        "max": 97.79063638376817
+      }
+    },
+    "interface": {
+      "resonance_frequency_ghz": {
+        "min": 7.315778950502871,
+        "mean": 7.7712117315505385,
+        "max": 8.152448125701325
+      },
+      "return_loss_db": {
+        "min": -33.123516259341656,
+        "mean": -25.426864213548168,
+        "max": -13.623997889136866
+      },
+      "insertion_loss_db": {
+        "min": 0.9995029387826697,
+        "mean": 1.750516929024999,
+        "max": 3.020284007446703
+      },
+      "impedance_ohm": {
+        "min": 44.89896170822162,
+        "mean": 51.59391689977943,
+        "max": 59.652867207231175
+      },
+      "yield_probability": {
+        "min": 0.03667044011875534,
+        "mean": 0.4020222135195734,
+        "max": 0.6024073105521215
+      }
+    },
+    "coupon": {
+      "sheet_resistance_drift_pct": {
+        "min": -2.734994784297715,
+        "mean": 26.948317634659094,
+        "max": 67.78113235062746
+      },
+      "contact_resistance_drift_pct": {
+        "min": -1.555763034545699,
+        "mean": 43.065973919334226,
+        "max": 104.68416284587846
+      },
+      "crack_probability": {
+        "min": 0.02060676841372648,
+        "mean": 0.30788691018376835,
+        "max": 0.9685562493367912
+      },
+      "delamination_area_pct": {
+        "min": 0.0,
+        "mean": 27.769434498670446,
+        "max": 82.5358858844652
+      },
+      "adhesion_strength_mpa": {
+        "min": 4.771999739141652,
+        "mean": 23.25550883786324,
+        "max": 34.79699491212773
+      },
+      "void_fraction_pct": {
+        "min": 0.0,
+        "mean": 4.724879850004999,
+        "max": 11.667657145969974
+      },
+      "post_aging_shear_mpa": {
+        "min": 0.8,
+        "mean": 15.947866025910828,
+        "max": 27.917390576970377
+      },
+      "reliability_score": {
+        "min": 0.0,
+        "mean": 51.633367628722,
+        "max": 94.96127386176234
+      }
+    }
+  }
+}
